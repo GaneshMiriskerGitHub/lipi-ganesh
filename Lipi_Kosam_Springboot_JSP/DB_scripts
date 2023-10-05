@@ -1,0 +1,32 @@
+drop database if exists my_database;
+
+create database my_database;
+
+use my_database;
+
+create table user (
+
+user_id int primary key,
+username varchar(20),
+password varchar(20)
+
+);
+
+insert into user values( 1, 'lipi',   'lipi123');
+insert into user values( 2, 'shloka', 'shloka123');
+insert into user values( 3, 'ganesh', 'ganesh123');
+
+select * from user;
+
+============ DROPDOWN ===============
+
+create table custcodes (
+custcodes varchar(20)
+);
+
+insert into custcodes values('12345');
+insert into custcodes values('9876857');
+insert into custcodes values('87623');
+insert into custcodes values('67453');
+
+select * from custcodes;
