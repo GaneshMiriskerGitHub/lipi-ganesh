@@ -73,8 +73,27 @@
             </thead>
             <tbody>
             <%
+                int currentPage = 1; // Default to the first page
+                int recordsPerPage = 5; // Number of records to display per page
+
+                String pageParam = request.getParameter("page");
+                if (pageParam != null && !pageParam.isEmpty()) {
+                    currentPage = Integer.parseInt(pageParam);
+                }
+
                 List<UserDetailsDTO> userdetailsData = (List<UserDetailsDTO>) request.getAttribute("userdetailsData");
-                for (UserDetailsDTO userDetails : userdetailsData) {
+
+                // Calculate total pages
+                int totalRecords = userdetailsData.size();
+                int totalPages = (int) Math.ceil((double) totalRecords / recordsPerPage);
+
+                // Calculate the start and end index for the current page
+                int startIndex = (currentPage - 1) * recordsPerPage;
+                int endIndex = Math.min(startIndex + recordsPerPage, totalRecords);
+
+                // Display the data for the current page
+                for (int i = startIndex; i < endIndex; i++) {
+                    UserDetailsDTO userDetails = userdetailsData.get(i);
             %>
             <tr>
                 <td><%=userDetails.getId()%></td>
@@ -201,6 +220,40 @@
             </tbody>
         </table>
     </div>
+    
+    
+    <!-- Pagination Section -->
+<div class="row">
+    <div class="col-md-12">
+        <ul class="pagination justify-content-center" >
+            <li class="page-item">
+                <a class="page-link" href="?page=1"  style="background-color: white; color: black;"  >First</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link"  href="?page=<%=currentPage - 1 %>"  style="background-color: white; color: black;" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <%-- Loop through pages and display page numbers --%>
+            <% for (int i = 1; i <= totalPages; i++) { %>
+                <li class="page-item <%= (i == currentPage) ? "active" : "" %>">
+                    <a class="page-link" href="?page=<%=i %>"   style="background-color: white; color: black;" ><%=i %></a>
+                </li>
+            <% } %>
+            <li class="page-item">
+                <a class="page-link" href="?page=<%=currentPage + 1 %>"  style="background-color: white; color: black;" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="?page=<%=totalPages %>"  style="background-color: white; color: black;" >Last</a>
+            </li>
+        </ul>
+    </div>
+</div>
+    
+    
+    
 </div>
 
 <!-- Include Bootstrap JavaScript and jQuery from CDN -->
