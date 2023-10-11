@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>jsp is working</h1>
+	<h1>jsp file</h1>
 	${helloms}
 </body>
 </html>
