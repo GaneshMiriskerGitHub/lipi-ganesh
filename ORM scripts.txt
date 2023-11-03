@@ -1,0 +1,17 @@
+drop database if exists Mydatabase_ORM;
+create database Mydatabase_ORM;
+use  Mydatabase_ORM;
+
+create table userdetails(
+   id int primary key auto_increment,
+   username varchar(50),
+   email varchar(20),
+   adhar_card_no varchar(20),
+   health_insurance_plan varchar(10)
+);
+
+insert into userdetails (username, email, adhar_card_no, health_insurance_plan) values('ganesh', 'ganesh@abcd.com', '123456789', 'SILVER');
+insert into userdetails (username, email, adhar_card_no, health_insurance_plan) values('lipi', 'lipi@abcd.com', '123456789', 'GOLD');
+insert into userdetails (username, email, adhar_card_no, health_insurance_plan) values('shloka', 'shloka@abcd.com', '123456789', 'PLATINUM');
+
+select * from userdetails;
