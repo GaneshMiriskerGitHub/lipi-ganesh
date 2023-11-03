@@ -2,12 +2,15 @@ package com.amazon.dto;
 
 public class UserDetailsDTO {
 	
-
 	
-	private Integer id;
-	private String username;
+	private Integer id; 
+	private String username; 
     private String email;
     private String adharcardno;
+    private HealthInsurancePlan healthInsurance;
+    
+    
+    
 	public Integer getId() {
 		return id;
 	}
@@ -31,8 +34,14 @@ public class UserDetailsDTO {
 	}
 	public void setAdharcardno(String adharcardno) {
 		this.adharcardno = adharcardno;
-	}	
-
-
+	}
+	public HealthInsurancePlan getHealthInsurance() {
+		return healthInsurance;
+	}
+	public void setHealthInsurance(HealthInsurancePlan healthInsurance) {
+		this.healthInsurance = healthInsurance;
+	}
+    
+	
 
 }
