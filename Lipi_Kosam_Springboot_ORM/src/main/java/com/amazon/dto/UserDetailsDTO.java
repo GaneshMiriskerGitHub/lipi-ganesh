@@ -7,7 +7,7 @@ public class UserDetailsDTO {
 	private String username; 
     private String email;
     private String adharcardno;
-    private HealthInsurancePlan healthInsurance;
+    private HealthInsurancePlan healthInsurancePlan;
     
     
     
@@ -35,12 +35,14 @@ public class UserDetailsDTO {
 	public void setAdharcardno(String adharcardno) {
 		this.adharcardno = adharcardno;
 	}
-	public HealthInsurancePlan getHealthInsurance() {
-		return healthInsurance;
+	public HealthInsurancePlan getHealthInsurancePlan() {
+		return healthInsurancePlan;
 	}
-	public void setHealthInsurance(HealthInsurancePlan healthInsurance) {
-		this.healthInsurance = healthInsurance;
+	public void setHealthInsurancePlan(HealthInsurancePlan healthInsurancePlan) {
+		this.healthInsurancePlan = healthInsurancePlan;
 	}
+	
+	
     
 	
 

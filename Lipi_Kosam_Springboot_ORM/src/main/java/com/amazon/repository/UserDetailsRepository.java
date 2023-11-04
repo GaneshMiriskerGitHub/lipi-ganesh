@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.amazon.dto.UserDetailsDTO;
 import com.amazon.entity.UserDetails;
 
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
@@ -30,16 +31,14 @@ public class UserDetailsRepository {
 		dtoObj.setId(obj.getId());
 		dtoObj.setAdharcardno(obj.getAdharcardno());
 		dtoObj.setEmail(obj.getEmail());
-		dtoObj.setHealthInsurance(obj.getHealthInsurancePlan());
+		dtoObj.setHealthInsurancePlan(obj.getHealthInsurancePlan());
 		dtoObj.setUsername(obj.getUsername());
 
 		return dtoObj;
 
 	}
 	
-	
-	
-	
+
 	
 	public List<UserDetailsDTO> getAllUserDetails() {
 	    List<UserDetailsDTO> userDetailsList = new ArrayList<>();
@@ -54,7 +53,7 @@ public class UserDetailsRepository {
 	        dtoObj.setId(userDetails.getId());
 	        dtoObj.setAdharcardno(userDetails.getAdharcardno());
 	        dtoObj.setEmail(userDetails.getEmail());
-	        dtoObj.setHealthInsurance(userDetails.getHealthInsurancePlan());
+	        dtoObj.setHealthInsurancePlan(userDetails.getHealthInsurancePlan());
 	        dtoObj.setUsername(userDetails.getUsername());
 	        userDetailsList.add(dtoObj);
 	    }
@@ -62,4 +61,31 @@ public class UserDetailsRepository {
 	    return userDetailsList;
 	}
 
+	
+	public String addUserDetails(UserDetailsDTO userdetailsdto) {
+		
+		// Dto motham Entity lo set cheyyali
+		UserDetails userDetails = new UserDetails();
+		userDetails.setAdharcardno(userdetailsdto.getAdharcardno());
+		userDetails.setEmail(userdetailsdto.getEmail());
+		userDetails.setHealthInsurancePlan(userdetailsdto.getHealthInsurancePlan());
+		userDetails.setId(userdetailsdto.getId());
+		userDetails.setUsername(userdetailsdto.getUsername());
+		
+		entityManager.persist(userDetails);
+		return "success";
+	}
+	
+	public String deleteCustomer(Integer id) {
+		UserDetails userdetails = entityManager.find(UserDetails.class, id);
+		entityManager.remove(userdetails);
+		return "success: record is deleted";
+	}
+	
+	
+	public String updateCustomer(Integer id, String email) {
+		UserDetails userdetails = entityManager.find(UserDetails.class, id);
+		userdetails.setEmail(email);
+		return "success: email is updated";
+	}
 }
