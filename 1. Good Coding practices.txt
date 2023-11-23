@@ -1,0 +1,32 @@
+1. Good Coding practices:
+	ResponseEntity   - always use this in return type of controller clases
+
+2. 
+create package :- com.blah.config
+                  @RestControllerAdvice
+create class:-    ControllerAdvice
+
+	paste the below chetha code inside class:-
+    //	@ExceptionHandler(MethodArgumentNotValidException.class)
+//	public ResponseEntity<?> exceptionHandler(MethodArgumentNotValidException e) {
+//		Map<String, String> errorMap = new HashMap<>();
+//		BindingResult result = e.getBindingResult();
+//		for (FieldError error : result.getFieldErrors()) {
+//			errorMap.put(error.getField(), error.getDefaultMessage());
+//		}
+//		return new ResponseEntity<>(errorMap, HttpStatus.BAD_REQUEST);
+//	}
+
+-------------------------------------------------------------------------------------
+
+provide checks/validations in DTO class  like :- @Max, @Min, @NotBlank
+
+------------------------------------------------------------------------------------
+Go to Controller class and mention @Valid
+
+------------------------------------------------------------------------------------
+
+Test the api-url in postman, by providing invalid data
+
+
+
