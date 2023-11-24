@@ -1,10 +1,27 @@
 package com.amazon.dto;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
+
+/*
+ {
+    "id":"4",
+    "username":"abcd",
+    "email":"abcd@abcd.com",
+    "adharcardno":"23673635473",
+    "healthInsurancePlan":"GOLD"
+
+}
+ */
+
 public class UserDetailsDTO {
-	
-	
+
+	@Min(value=0, message="id must not be negative")
+	@Max(value=15, message="id must not exceed 15")
 	private Integer id; 
 	private String username; 
+	@NotBlank(message="email must not be empty")
     private String email;
     private String adharcardno;
     private HealthInsurancePlan healthInsurancePlan;

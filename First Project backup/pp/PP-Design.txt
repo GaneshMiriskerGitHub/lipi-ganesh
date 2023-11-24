@@ -1,0 +1,39 @@
+-> sign in page implementation.
+
+-> Sign up today and avail exiting benifits
+       -> big billion days from august 13th 12:pm to august 14th 12:pm
+                                
+
+->Story
+      -> kattappa gif
+      -> shivagami gif
+-> About myself
+         -> likes and dislikes
+
+-> name definition.
+
+-> what our actors have to say 
+-> politicians about this day
+            -> jagan
+            -> chandrababu naidu
+-> Remaining all photo cards , exmaple allu arjun thaggede le
+
+-> naa peru mukesh add
+
+-> what i have to say.
+                 -> she is like god, hanuman, doesn't know how much strength she has, so powerfull
+                 -> 
+-> event details
+   nominate yourself , 
+   pop up will come , if "can't come is selected ," a message is to be displayed saying , nee karma {along with a gif (probably kid face might be better)}
+         -> refer the link:-https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_templates_wedding&stacked=h
+
+FAQ'S
+
+  -> what are the benifits of applying today.
+           -> Don't missout the offer, use coupon codes before it expires
+  			  couponcode1
+  			  couponcode2
+  			  couponcode3
+
+

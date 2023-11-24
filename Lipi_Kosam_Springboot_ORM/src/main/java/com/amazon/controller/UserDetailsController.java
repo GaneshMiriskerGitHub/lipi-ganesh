@@ -3,6 +3,8 @@ package com.amazon.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,42 +15,46 @@ import org.springframework.web.bind.annotation.RestController;
 import com.amazon.dto.UserDetailsDTO;
 import com.amazon.service.UserDetailsService;
 
+import jakarta.validation.Valid;
+
 @RestController
 public class UserDetailsController {
-	
+
 	@Autowired
 	UserDetailsService userDetailsService;
-	
+
 	@GetMapping("/getUserDetails/{id}")
-	public UserDetailsDTO getUserDetailsForThisId(@PathVariable("id") Integer id) {
-	
+	public ResponseEntity<?> getUserDetailsForThisId(@PathVariable("id") Integer id) {
+
 		UserDetailsDTO dtoObj = userDetailsService.getUserDetailsForThisId(id);
-		
-		return dtoObj;
-		
+
+		return new ResponseEntity<>(dtoObj, HttpStatus.OK);
 	}
-	
+
 	@GetMapping("/getAllUserDetails")
-	public List<UserDetailsDTO> getAllUserDetails() {
-		return userDetailsService.getAllUserDetails();
+	public ResponseEntity<?> getAllUserDetails() throws Exception {
+		List<UserDetailsDTO> listDTO = userDetailsService.getAllUserDetails();
+		return new ResponseEntity<>(listDTO, HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/addUserDetails")
-	public String addUserDetails(@RequestBody UserDetailsDTO userdetailsdto) {
-		System.out.println(userdetailsdto.getId()+ " ********************");
-		return userDetailsService.addUserDetails(userdetailsdto);
-//		return "success";
+	public ResponseEntity<?> addUserDetails(@RequestBody @Valid  UserDetailsDTO userdetailsdto) throws Exception {
+		System.out.println(userdetailsdto.getId() + " ********************");
+		
+		String msg = userDetailsService.addUserDetails(userdetailsdto);
+		return new ResponseEntity<>(msg, HttpStatus.CREATED);
 	}
-	
-	
+
 	@PostMapping("deleteUserDetails/{id}")
-	public String deleteCustomer(@PathVariable("id") Integer id) {
-		return userDetailsService.deleteCustomer(id);
+	public ResponseEntity<?> deleteCustomer(@PathVariable("id") Integer id) {
+
+		return new ResponseEntity<>(userDetailsService.deleteCustomer(id), HttpStatus.OK);
 	}
-	
+
 	@PostMapping("/updateEmail")
-	public String updateCustomer(@RequestParam("id") Integer id, @RequestParam("email") String email) {
-		return userDetailsService.updateCustomer(id, email);
+	public ResponseEntity<String> updateCustomer(@RequestParam("id") Integer id, @RequestParam("email") String email) {
+		String msg = userDetailsService.updateCustomer(id, email);
+		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
 	}
 
 }

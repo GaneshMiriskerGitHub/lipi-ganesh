@@ -20,6 +20,7 @@ public class UserDetailsRepository {
 	@PersistenceContext
 	EntityManager entityManager;
 	
+
 	public UserDetailsDTO getUserDetailsForThisId(Integer id) {
 
 		UserDetailsDTO dtoObj = new UserDetailsDTO();
@@ -76,6 +77,7 @@ public class UserDetailsRepository {
 		return "success";
 	}
 	
+	
 	public String deleteCustomer(Integer id) {
 		UserDetails userdetails = entityManager.find(UserDetails.class, id);
 		entityManager.remove(userdetails);
@@ -88,4 +90,6 @@ public class UserDetailsRepository {
 		userdetails.setEmail(email);
 		return "success: email is updated";
 	}
+	
+	
 }

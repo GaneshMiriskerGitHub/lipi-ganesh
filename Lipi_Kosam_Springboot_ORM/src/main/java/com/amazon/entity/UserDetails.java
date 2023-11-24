@@ -2,6 +2,7 @@ package com.amazon.entity;
 
 import com.amazon.dto.HealthInsurancePlan;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -29,13 +30,6 @@ public class UserDetails {
 	@Enumerated(value=EnumType.STRING)
 	@Column(name="health_insurance_plan")
     private HealthInsurancePlan healthInsurancePlan;
-
-	
-	
-	
-	
-	
-	
 	
 
 	public Integer getId() {
@@ -77,6 +71,8 @@ public class UserDetails {
 	public void setHealthInsurancePlan(HealthInsurancePlan healthInsurancePlan) {
 		this.healthInsurancePlan = healthInsurancePlan;
 	}
+
+	
     
     
     
