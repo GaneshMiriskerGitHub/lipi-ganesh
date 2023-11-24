@@ -1,0 +1,45 @@
+pom.xml lo dependency add cheyyali lipi:-
+
+	        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+----------------------------------------------------------------------------------------
+
+Create an interface [UserDetailsRepository].Java 
+should extend as below :-
+     
+public interface  [UserDetailsRepository].Java   extends CRUDRepository < ["EntityPeru"] , [DataType_of_our_PrimaryKey"] >    
+
+{
+
+
+}
+
+----------------------------------------------------------------------------------------
+
+Add General Exception Handler
+
+----------------------------------------------------------------------------------------
+
+passing to and 
+passsing through DTO must happen in service class
+
+Methods:- (chattam thana pani thaanu chesuko pothundi)
+READ:
+1.findById(
+2.findAll(
+
+CREATE:
+3.save()
+
+DELETE:
+4.deleteById(
+
+UDATE:
+1.findById(
+  setters
+
+----------------------------------------------------------------------------------------
+
