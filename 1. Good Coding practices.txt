@@ -1,3 +1,15 @@
+POM.XML lo first dependency add cheyyali:-
+
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+			<version>3.1.5</version>
+		</dependency>
+
+--------------------------------------------------------------------------------------------
+
+
 1. Good Coding practices:
 	ResponseEntity   - always use this in return type of controller clases
 
