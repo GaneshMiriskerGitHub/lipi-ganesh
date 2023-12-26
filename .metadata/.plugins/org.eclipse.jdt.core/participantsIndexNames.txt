@@ -1,0 +1,13 @@
+INDEX VERSION 1.134
+C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2049188480.index
+\Lipi_Kosam_Springboot_Security\src\main\java
+C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2794911449.index
+\Lipi_Kosam_SpringMVC\src
+C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1914051334.index
+\Demo_SpringREST_READ\src\main\java
+C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2338592252.index
+\Lipi_Kosam_MVC_JSP\src\main\java
+C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1307193800.index
+\Lipi_Kosam_MVC_JSP\src\main\java
+C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1013360937.index
+\Lipi_Kosam_Springboot_JSP\src\main\java

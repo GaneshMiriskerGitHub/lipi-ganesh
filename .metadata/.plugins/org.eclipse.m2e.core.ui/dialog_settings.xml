@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\ganes\Downloads\shoutreview"/>
+			<item value="C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\IMDB"/>
+			<item value="C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\Lipi_Kosam_Springboot_JSP"/>
+			<item value="C:\Users\ganes\Downloads\Demo02_SpringSecurity\Demo02_SpringSecurity"/>
+			<item value="C:\Users\ganes\Downloads\PersistenceLayerDemos1688753066749\PersistenceLayer-Demos\Demo_SpringData_CRUD_Delete"/>
+			<item value="C:\Users\ganes\Downloads\Demo01_SpringSecurity\Demo01_SpringSecurity"/>
+			<item value="C:\Users\ganes\Downloads\PersistenceLayerDemos1688753066749\PersistenceLayer-Demos\Demo_SpringData_Sorting"/>
+			<item value="C:\Users\ganes\Downloads\PersistenceLayerDemos1688753066749\PersistenceLayer-Demos\Demo_SpringJDBC"/>
+			<item value="C:\Users\ganes\Downloads\PersistenceLayerDemos1688753066749\PersistenceLayer-Demos\Demo_TableStrategy_Default"/>
+			<item value="C:\Users\ganes\Downloads\PersistenceLayerDemos1688753066749\PersistenceLayer-Demos\Demo_TableStrategy_Custom"/>
+			<item value="C:\Users\ganes\Downloads\PersistenceLayerDemos1688753066749\PersistenceLayer-Demos\Demo_SpringORM_DELETE"/>
+			<item value="C:\Users\ganes\Downloads\PersistenceLayerDemos1688753066749\PersistenceLayer-Demos\Demo_SpringORM_READ"/>
+			<item value="C:\Users\ganes\Downloads\lipi-ganesh-main\lipi-ganesh-main\Lipi_Kosam_SpringMVC"/>
+			<item value="C:\Lipi-Ganesh_Complete_WebDevelopement_Repository\Demo_SpringREST_READ_JSP"/>
+			<item value="C:\Users\ganes\Downloads\DemoSpringRESTREAD16516818981251658902488307"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\ganes\OneDrive\Documents\JAVA BACKEND\firstspring-1\pom.xml"/>
+			<item value="C:\Users\ganes\OneDrive\Documents\JAVA BACKEND\firstspring-1\src\main\java\com\gfg\jbdl\Firstspring1Application.java"/>
+			<item value="C:\Users\ganes\OneDrive\Documents\JAVA BACKEND\DemoSample\pom.xml"/>
+			<item value="C:\Users\ganes\OneDrive\Documents\JAVA BACKEND\firstspring-1\src\main\java\com\gfg\jbdl\service\MovieService.java"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.amazon"/>
+			<item value="com.amazon.Lipi_Kosam_JSP_MVC"/>
+			<item value="com.Lipi_Kosam_MVC_JSP"/>
+		</list>
+		<list key="groupId">
+			<item value="com.amazon"/>
+			<item value="com"/>
+		</list>
+		<list key="artifactId">
+			<item value="Lipi_Kosam_MVC_JSP"/>
+			<item value="Lipi_Kosam_JSP_MVC"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="838"/>
+		<item key="x" value="720"/>
+		<item key="y" value="0"/>
+	</section>
+</section>

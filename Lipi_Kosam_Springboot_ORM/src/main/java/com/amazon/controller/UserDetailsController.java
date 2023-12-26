@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.amazon.dto.UserDetailsDTO;
+import com.amazon.entity.UserDetails;
 import com.amazon.service.UserDetailsService;
 
 import jakarta.validation.Valid;
@@ -26,16 +27,16 @@ public class UserDetailsController {
 	@GetMapping("/getUserDetails/{id}")
 	public ResponseEntity<?> getUserDetailsForThisId(@PathVariable("id") Integer id) {
 
-		UserDetailsDTO dtoObj = userDetailsService.getUserDetailsForThisId(id);
+		UserDetails dtoObj = userDetailsService.getUserDetailsForThisId(id);
 
 		return new ResponseEntity<>(dtoObj, HttpStatus.OK);
 	}
 
-	@GetMapping("/getAllUserDetails")
-	public ResponseEntity<?> getAllUserDetails() throws Exception {
-		List<UserDetailsDTO> listDTO = userDetailsService.getAllUserDetails();
-		return new ResponseEntity<>(listDTO, HttpStatus.OK);
-	}
+//	@GetMapping("/getAllUserDetails")
+//	public ResponseEntity<?> getAllUserDetails() throws Exception {
+//		List<UserDetailsDTO> listDTO = userDetailsService.getAllUserDetails();
+//		return new ResponseEntity<>(listDTO, HttpStatus.OK);
+//	}
 
 	@PostMapping("/addUserDetails")
 	public ResponseEntity<?> addUserDetails(@RequestBody @Valid  UserDetailsDTO userdetailsdto) throws Exception {
@@ -48,12 +49,12 @@ public class UserDetailsController {
 	@PostMapping("deleteUserDetails/{id}")
 	public ResponseEntity<?> deleteCustomer(@PathVariable("id") Integer id) {
 
-		return new ResponseEntity<>(userDetailsService.deleteCustomer(id), HttpStatus.OK);
+		return new ResponseEntity<>(userDetailsService.deleteUserDetails(id), HttpStatus.OK);
 	}
 
 	@PostMapping("/updateEmail")
 	public ResponseEntity<String> updateCustomer(@RequestParam("id") Integer id, @RequestParam("email") String email) {
-		String msg = userDetailsService.updateCustomer(id, email);
+		String msg = userDetailsService.updateUserDetails(id, email);
 		return new ResponseEntity<String>(msg, HttpStatus.CREATED);
 	}
 

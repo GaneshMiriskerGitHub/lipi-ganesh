@@ -1,0 +1,26 @@
+package java8Features;
+
+public class Tester {
+	
+	interface DemoInterface1 { //To implement the lambda expression with no arguments
+	    void noArguments();
+	}
+
+	interface DemoInterface2 { //To implement the lambda expression with two arguments
+	    void twoArguments(String s1, Integer i1);
+	}
+
+	interface DemoInterface3 { //To implement the lambda expression with one argument
+	    Integer singleArgument(Integer i1);
+	}
+	
+
+	public static void main(String[] args) {
+		
+		 () -> {
+			System.out.println("skhdb");
+		};
+
+	}
+
+}

@@ -3,6 +3,8 @@ package com.amazon.config;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -13,7 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 @RestControllerAdvice
 public class ControllerAdvice {
-	
+
 	// method : any exception occurs at any flie , class anthign
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<?> exceptionHandler(MethodArgumentNotValidException e) {
@@ -23,6 +25,14 @@ public class ControllerAdvice {
 			errorMap.put(error.getField(), error.getDefaultMessage());
 		}
 		return new ResponseEntity<>(errorMap, HttpStatus.BAD_REQUEST);
+	}
+
+	@Autowired
+	Environment environment;
+
+	@ExceptionHandler(Exception.class)
+	public ResponseEntity<?> exceptionHandler(Exception e) {
+		return new ResponseEntity<>(e.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 }

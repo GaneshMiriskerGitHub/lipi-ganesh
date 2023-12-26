@@ -1,0 +1,90 @@
+package com.amazon.config;
+
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class SecurityConfiguration implements WebMvcConfigurer {
+
+    /*
+    1. get the user signed up and store username, password in DB.
+    2. create a login page.
+    3. take username from request form the DB.
+    4. Compare the passwords.
+    5. If valid return token else return exception.
+    6. check if user is authorized to call API.
+    */
+
+    // --------
+    //  Done By :-
+    /*
+     /*
+    1. get the user signed up and store username, password in DB.  -> UserDetails
+    2. create a login page. -> not mandatory (optional)
+    3. take username from request form the DB.  -> UserDetailService
+    4. Compare the passwords.  -> password encoder
+    5. If valid return token else return exception.  -> AuthenticationManager
+    6. check if user is authorized to call API.
+    */
+
+
+    /*
+    1. After adding spring security dependency, we will get UserDetails Interface installed
+    2. This interface {UserDetails} is implemented by a class called {User}
+    3. In DB our encoded passwords are stored, {we do not store our passwords as it is}
+    4.
+                            1. Hashing the password  -> here once the password is converted , we cannot reverse it
+                                    passwords are used only for hashing
+                            (OR)
+                            2. Encrypting the password -> here the converted password can be revered as well
+                                    example:- messaging uses encrypting and decrypting technique
+    5.
+     */
+
+
+    /*
+    1. As per first step we need to have a User Entity , so create a MyUser class in domain/entity package
+    2. create Service class for userdetails
+    3. encode the password before storing in the DB
+     */
+
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return NoOpPasswordEncoder.getInstance();
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity security) throws Exception {
+        security.authorizeRequests()
+                .requestMatchers(request -> {
+                    return "/movie".equals(request.getServletPath()) && HttpMethod.GET.matches(request.getMethod());
+                }).hasAnyAuthority("admin", "user")
+                .requestMatchers(request -> {
+                    return "/movie".equals(request.getServletPath()) && HttpMethod.POST.matches(request.getMethod());
+                }).hasAuthority("admin")
+                .requestMatchers("/movie/**").hasAnyAuthority("admin", "user")
+                .requestMatchers("/review/**").hasAuthority("user")
+                .requestMatchers("/greet/admin/**").hasAuthority("admin")
+                .requestMatchers("/greet/**").hasAuthority("user")
+                .requestMatchers("/signup").permitAll()
+                .and()
+                .httpBasic(new Customizer<HttpBasicConfigurer<HttpSecurity>>() {
+                    @Override
+                    public void customize(HttpBasicConfigurer<HttpSecurity> httpSecurityHttpBasicConfigurer) {
+                            // empty method
+                    }
+                });
+
+        return security.build();
+    }
+}

@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import com.amazon.dto.UserDetailsDTO;
 import com.amazon.entity.UserDetails;
 import com.amazon.repository.UserDetailsRepository;
-import com.amazon.repository.UserDetailsRepositoryImpl;
 
 import jakarta.transaction.Transactional;
 
@@ -19,7 +18,7 @@ import jakarta.transaction.Transactional;
 public class UserDetailsService {
 
 	@Autowired
-	UserDetailsRepositoryImpl UserDetailsRepository;
+	UserDetailsRepository UserDetailsRepository;
 
 	@Autowired
 	UserDetailsRepository userDetailsRepositoryCRUD;

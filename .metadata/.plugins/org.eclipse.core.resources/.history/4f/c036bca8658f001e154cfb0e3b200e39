@@ -1,0 +1,50 @@
+package com.amazon.config;
+
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configurers.HttpBasicConfigurer;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+@Configuration
+public class SecurityConfiguration implements WebMvcConfigurer{
+	
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return NoOpPasswordEncoder.getInstance();
+    }
+
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity security) throws Exception {
+        security.authorizeRequests()
+                .requestMatchers(request -> {
+                    return "/movie".equals(request.getServletPath()) && HttpMethod.GET.matches(request.getMethod());
+                }).hasAnyAuthority("admin", "user")
+                .requestMatchers(request -> {
+                    return "/movie".equals(request.getServletPath()) && HttpMethod.POST.matches(request.getMethod());
+                }).hasAuthority("admin")
+                .requestMatchers("/movie/**").hasAnyAuthority("admin", "user")
+                .requestMatchers("/review/**").hasAuthority("user")
+                .requestMatchers("/greet/admin/**").hasAuthority("admin")
+                .requestMatchers("/greet/**").hasAuthority("user")
+                .requestMatchers("/signup").permitAll()
+                .and()
+                .httpBasic(new Customizer<HttpBasicConfigurer<HttpSecurity>>() {
+                    @Override
+                    public void customize(HttpBasicConfigurer<HttpSecurity> httpSecurityHttpBasicConfigurer) {
+                            // empty method
+                    }
+                });
+
+        return security.build();
+    }
+	
+
+}

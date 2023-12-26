@@ -1,0 +1,22 @@
+package T2_Lambdas_Gurinchi;
+
+/*
+ * Lipi kosam Notes :
+ * 
+ * If there is a functional interface ,
+ * you can provide implementation of the unimplemented method 
+ * by creating Impl class  "This is bad practice"
+ * 
+ * 
+ * 
+ * 
+ */
+
+public class Tester {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

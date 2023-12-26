@@ -1,0 +1,13 @@
+package T2_Lambdas_Gurinchi;
+
+public class Example4_Calculator {
+
+	public interface DemoInterfaceCalcy {
+		public int calculate(int n1, int n2);
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

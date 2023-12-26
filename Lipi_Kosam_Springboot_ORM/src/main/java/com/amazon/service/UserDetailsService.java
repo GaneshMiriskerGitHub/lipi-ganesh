@@ -18,13 +18,13 @@ public class UserDetailsService {
 	@Autowired
 	UserDetailsRepository  UserDetailsRepository;
 
-	public UserDetailsDTO getUserDetailsForThisId(Integer id) {
+	public UserDetails getUserDetailsForThisId(Integer id) {
 		return UserDetailsRepository.getUserDetailsForThisId(id);
 	}
 	
-	public List<UserDetailsDTO> getAllUserDetails() {
-		return UserDetailsRepository.getAllUserDetails();
-	}
+//	public List<UserDetailsDTO> getAllUserDetails() {
+//		return UserDetailsRepository.getAllUserDetails();
+//	}
 	
 
 	public String addUserDetails(UserDetailsDTO userdetailsdto) {
@@ -32,12 +32,12 @@ public class UserDetailsService {
 		return UserDetailsRepository.addUserDetails(userdetailsdto);
 	}
 	
-	public String deleteCustomer(Integer id) {
-		return UserDetailsRepository.deleteCustomer(id);
+	public String deleteUserDetails(Integer id) {
+		return UserDetailsRepository.deleteUserDetails(id);
 	}
 	
-	public String updateCustomer(Integer id, String email) {
-		return UserDetailsRepository.updateCustomer(id, email);
+	public String updateUserDetails(Integer id, String email) {
+		return UserDetailsRepository.updateUserDetails(id, email);
 	}
 
 }

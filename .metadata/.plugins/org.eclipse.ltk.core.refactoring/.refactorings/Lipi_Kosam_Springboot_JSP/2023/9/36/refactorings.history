@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Lipi_Kosam_Springboot_JSP/src/main/webapp/WEB-INF/views/error.jsp&apos; to &apos;errorLogin.jsp&apos;" description="Rename resource &apos;error.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/views/error.jsp" name="errorLogin.jsp" stamp="1693923294435" updateReferences="true"/>
+</session>

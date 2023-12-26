@@ -1,0 +1,13 @@
+package com.cols;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication(scanBasePackages = "com.cols")
+public class LipiKosamSpringbootMvcJspApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LipiKosamSpringbootMvcJspApplication.class, args);
+	}
+
+}

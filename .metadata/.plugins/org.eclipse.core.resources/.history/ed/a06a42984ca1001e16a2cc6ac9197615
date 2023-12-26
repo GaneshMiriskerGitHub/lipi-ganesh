@@ -1,0 +1,13 @@
+package T2_Lambdas_Gurinchi;
+
+import java.util.ArrayList;
+
+public class Example6_ForEach {
+
+	public static void main(String[] args) {
+		
+		ArrayList<String> listOfNames = ArrayList<>();
+
+	}
+
+}

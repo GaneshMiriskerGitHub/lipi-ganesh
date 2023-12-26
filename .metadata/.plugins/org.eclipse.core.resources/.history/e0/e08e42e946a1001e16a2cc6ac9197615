@@ -1,0 +1,19 @@
+package T2_Lambdas_Gurinchi;
+
+public class Example5_Multiple_Lines {
+	
+	public interface DemoInterfacePeddaMethodu {
+		public void isEligibleForVote(String name, int age);
+	}
+
+	public static void main(String[] args) {
+		
+		DemoInterfacePeddaMethodu obj = (name, age) -> {
+			if(age >= 18) {
+				System.out.println(name + " is eligible to vote");
+			}
+		}
+
+	}
+
+}

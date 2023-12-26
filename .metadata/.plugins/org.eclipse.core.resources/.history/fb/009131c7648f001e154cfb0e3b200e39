@@ -1,0 +1,25 @@
+package com.amazon.service;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.amazon.entity.MyUser;
+
+@Service
+public class MyUserDetailsService implements UserDetailsService{
+	
+	Map<String, MyUser> userMap = new HashMap<>();
+
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		if(userMap.containsKey(username)) {
+			return userMap.get(username);
+		}
+	}
+
+}

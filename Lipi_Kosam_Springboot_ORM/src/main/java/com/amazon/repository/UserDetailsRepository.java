@@ -15,51 +15,38 @@ import jakarta.persistence.TypedQuery;
 
 
 @Repository
-public class UserDetailsRepository {
+public class UserDetailsRepository  {
 	
 	@PersistenceContext
 	EntityManager entityManager;
 	
 
-	public UserDetailsDTO getUserDetailsForThisId(Integer id) {
+	public UserDetails getUserDetailsForThisId(Integer id) {
 
-		UserDetailsDTO dtoObj = new UserDetailsDTO();
 
 		UserDetails obj = entityManager.find(UserDetails.class,id );
 				
-				//entityManager.find(UserDetails.class, id);
 		
-		dtoObj.setId(obj.getId());
-		dtoObj.setAdharcardno(obj.getAdharcardno());
-		dtoObj.setEmail(obj.getEmail());
-		dtoObj.setHealthInsurancePlan(obj.getHealthInsurancePlan());
-		dtoObj.setUsername(obj.getUsername());
 
-		return dtoObj;
+		return obj;
 
 	}
 	
 
 	
-	public List<UserDetailsDTO> getAllUserDetails() {
-	    List<UserDetailsDTO> userDetailsList = new ArrayList<>();
+	public List<UserDetails> getAllUserDetails() {
+	  
 	    
 	    // Use a query to retrieve all records from the UserDetails table
 	    String query = "SELECT u FROM UserDetails u";
 	    TypedQuery<UserDetails> userDetailsEntityList = entityManager.createQuery(query, UserDetails.class);
 	    List<UserDetails> userDetailsEntities = userDetailsEntityList.getResultList();
 
-	    for (UserDetails userDetails : userDetailsEntities) {
-	        UserDetailsDTO dtoObj = new UserDetailsDTO();
-	        dtoObj.setId(userDetails.getId());
-	        dtoObj.setAdharcardno(userDetails.getAdharcardno());
-	        dtoObj.setEmail(userDetails.getEmail());
-	        dtoObj.setHealthInsurancePlan(userDetails.getHealthInsurancePlan());
-	        dtoObj.setUsername(userDetails.getUsername());
-	        userDetailsList.add(dtoObj);
-	    }
+	    
+	    
+	    
 
-	    return userDetailsList;
+	    return userDetailsEntities;
 	}
 
 	
@@ -78,14 +65,14 @@ public class UserDetailsRepository {
 	}
 	
 	
-	public String deleteCustomer(Integer id) {
+	public String deleteUserDetails(Integer id) {
 		UserDetails userdetails = entityManager.find(UserDetails.class, id);
 		entityManager.remove(userdetails);
 		return "success: record is deleted";
 	}
 	
 	
-	public String updateCustomer(Integer id, String email) {
+	public String updateUserDetails(Integer id, String email) {
 		UserDetails userdetails = entityManager.find(UserDetails.class, id);
 		userdetails.setEmail(email);
 		return "success: email is updated";

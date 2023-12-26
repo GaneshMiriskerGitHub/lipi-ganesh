@@ -1,0 +1,31 @@
+package com.amazon.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.amazon.dto.UserDetailsDTO;
+import com.amazon.service.UserDetailsFetchService;
+
+@Controller
+public class UserDetailsFetchController {
+	
+	@Autowired
+	UserDetailsFetchService userDetailsFetchSerivce;
+	
+	@GetMapping("/fetchUserByUserId")
+	public String fetchUserDetails(@RequestParam("userid") Integer userid, Model model) throws Exception {
+		System.out.println("********* " + userid);
+		
+		List<UserDetailsDTO> userdetailsData = userDetailsFetchSerivce.fetchUserDetails(userid);
+		
+		model.addAttribute("userdetailsData", userdetailsData);
+		
+		return "userDetailsViewer";
+	}
+
+}

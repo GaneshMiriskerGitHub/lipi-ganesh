@@ -1,0 +1,13 @@
+package java8Features;
+
+public class Tester {
+
+	public abstract void method();
+
+	public static void main(String[] args) {
+
+		
+
+	}
+
+}

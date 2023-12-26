@@ -1,0 +1,15 @@
+package java8Features;
+
+public class Tester {
+	
+	() -> { System.out.println("No argument"); }
+	(int argument1, String argument2) -> { System.out.println("Multiple arguments"); }
+
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

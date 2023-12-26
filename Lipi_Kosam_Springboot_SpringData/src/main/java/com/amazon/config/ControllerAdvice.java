@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class ControllerAdvice {
 
-	// method : any exception occurs at any flie , class anthign
+	// method : any exception occurs at any file ,class  anything
 	@ExceptionHandler(MethodArgumentNotValidException.class)
 	public ResponseEntity<?> exceptionHandler(MethodArgumentNotValidException e) {
 		Map<String, String> errorMap = new HashMap<>();

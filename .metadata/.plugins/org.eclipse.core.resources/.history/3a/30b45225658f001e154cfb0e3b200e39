@@ -1,0 +1,27 @@
+package com.amazon;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.amazon.entity.MyUser;
+
+@SpringBootApplication
+public class LipiKosamSpringbootJspApplication implements CommandLineRunner{
+
+	public static void main(String[] args) {
+		SpringApplication.run(LipiKosamSpringbootJspApplication.class, args);
+	}
+	
+	@Autowired
+	MyUserDetailsService myUserDetailsService;
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+		myUserDetailsService.addUser(new MyUser("abcd", "1234", "admin"));
+		myUserDetailsService.addUser(new MyUser("efgh", "1234", "user"));
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package T2_Lambdas_Gurinchi;
+
+public class Example5_Multiple_Lines {
+	
+	public interface DemoInterfacePeddaMethodu {
+		public void examPassAa(String name, int marks);
+	}
+
+	public static void main(String[] args) {
+		
+		DemoInterfacePeddaMethodu obj = (name, marks) -> {
+			if(marks >= 90) {
+				System.out.println(name + " pass ayinav thee, inkem le topperrr..");
+			}else {
+				System.out.println(name + " is not eligible to vote");
+			}
+		};
+		
+		obj.isEligibleForVote("shloka paapa", 1);
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package T2_Lambdas_Gurinchi;
+
+/*
+ * Lipi kosam Notes :
+ * 
+ * Generally, 
+ * Service    ki -> ServiceImpl
+ * Repository ki -> RepositoryImpl
+ * DAO        ki -> DAOImpl
+ * "This is Good practice"
+ * 
+ * 
+ * Similarly, For Functional "Interface" we can give its own Impl "class"
+ * "This is bad practice"
+ * 
+ * Explanation:
+ * If there is a functional interface ,
+ * you can provide implementation of the unimplemented method 
+ * by creating Impl class  "This is bad practice"
+ * 
+ * 
+ * 
+ * 
+ * 
+ * Q) What is Good Practice ?
+ *    "pullalu pettali"
+ *    So Whenever you want to provide implementation of functional interfaces
+ *    use Lambda expressions
+ * 
+ * 
+ */
+
+public class Tester {
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

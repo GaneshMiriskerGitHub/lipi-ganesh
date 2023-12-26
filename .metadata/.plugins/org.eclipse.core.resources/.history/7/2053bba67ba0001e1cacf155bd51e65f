@@ -1,0 +1,17 @@
+package java8Features;
+
+public class Tester {
+	
+	(e1, e2) -> {
+	    int value = e1.getCountry().compareTo(e2.getCountry());
+	    return value;
+	}
+
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

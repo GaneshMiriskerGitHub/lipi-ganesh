@@ -1,0 +1,15 @@
+package T2_Lambdas_Gurinchi;
+
+public class Example5_Multiple_Lines {
+	
+	public interface DemoInterfacePeddaMethodu {
+		public int calculate(int n1, int n2);
+	}
+
+	public static void main(String[] args) {
+		
+		
+
+	}
+
+}

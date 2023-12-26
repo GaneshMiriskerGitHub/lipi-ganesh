@@ -1,0 +1,21 @@
+package T2_Lambdas_Gurinchi;
+
+public class Example3 {
+	
+	public interface DemoInterfaceArgs1 {
+		public void add(int n1, int n2);
+	}
+	
+	public interface DemoInterfaceArgs2 {
+		public int add(int n1, int n2);
+	}
+
+	public static void main(String[] args) {
+		
+		DemoInterfaceArgs demoObj = (n1, n2) -> System.out.println(n1+n2); 
+		
+		demoObj.add(1, 2);
+
+	}
+
+}

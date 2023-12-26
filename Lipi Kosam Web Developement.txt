@@ -1,0 +1,54 @@
+ Q) What is MVC :- model view controller 
+
+ Ans:-  URL kottandi Action.java pattandi
+	       OR
+        JSP connecting to my Action.java Class
+               OR
+        Front-end connecting to my Action.java / Controller.Java Class
+
+
+
+
+okkka sari correcttu "Action Class" lo correctt "method()" ki connect ayinappudu :-
+
+that method in "Action.Java" be like:-           "Service.Java" be like :-                    "DAOImpl" be like :-
+(service class ni data adugutha)        ---->    (DAOImpl class ni data adugutha)   ---->   (DB nunchi data thechukunta)    -> DB
+
+
+Json data theeskelli JSP lo nimpestha, 
+screen lo vachesthundi                  <----    json data Action ki istha          <----    json data service ki istha     <-
+
+
+
+
+
+
+
+MVC - Model View Controller ?
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+          CONTROLLER (Action.java)               |       MODEL  (DTO Object)                   |     VIEW   (JSP)                                        |
+-------------------------------------------------|---------------------------------------------|---------------------------------------------------------
+na Controller / Action.java classu             --|->  (fills DB data into a DTO object)      --|-> (Data from the DTO which came from Action will be filled                             
+                                                                                                    in JSP page (my screen)                                |
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+Q) what is maven ?, why do we use it?
+   what is the advantage of using maven , instead of downloading and adding required jars to our project ?
+
+
+
+
+
+--------------------------------
+
+Q) what is serialization ?
+
+
+
+
+1:22:53

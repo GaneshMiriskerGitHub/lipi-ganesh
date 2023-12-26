@@ -1,0 +1,15 @@
+package T2_Lambdas_Gurinchi;
+
+import java.util.List;
+
+public class Example6_ForEach {
+
+	public static void main(String[] args) {
+		
+		List<String> strArr = List.of("Tyson", "Kai", "Max", "Ray", "Daichi");
+		
+		strArr.forEach(ele -> System.out.println(ele);)
+
+	}
+
+}

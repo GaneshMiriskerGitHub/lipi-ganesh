@@ -1,0 +1,19 @@
+package T2_Lambdas_Gurinchi;
+
+import T2_Lambdas_Gurinchi.Example2.DemoInterfaceArgs;
+
+public class Example3 {
+	
+	public interface DemoInterfaceArgs {
+		public void greet(int n, int m);
+	}
+
+	public static void main(String[] args) {
+		
+		DemoInterfaceArgs demoObj = (name) -> System.out.println("Hi " + name);
+		
+		demoObj.greet("lipi-ganesh");
+
+	}
+
+}

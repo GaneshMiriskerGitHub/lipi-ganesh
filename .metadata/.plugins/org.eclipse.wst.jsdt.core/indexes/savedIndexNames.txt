@@ -1,0 +1,6 @@
+INDEX VERSION 1.4+C:\Users\ganes\OneDrive\Documents\Lipi Kosam Spring\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+78880909.index
+976609201.index
+3689047994.index
+1493926028.index
+2467488517.index

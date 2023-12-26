@@ -1,0 +1,27 @@
+package java8Features;
+
+public class Tester {
+
+	public interface DemoInterface1 { // To implement the lambda expression with no arguments
+		void Arguments();
+	}
+
+	interface DemoInterface2 {
+		void twoArguments(String s1, Integer i1);
+	}
+
+	interface DemoInterface3 {
+		Integer singleArgument(Integer i1);
+	}
+
+	public static void main(String[] args) {
+
+		DemoInterface1 demoInterface1 = () -> {
+			System.out.println("implementation created");
+		};
+		
+		demoInterface1.noArguments();
+
+	}
+
+}

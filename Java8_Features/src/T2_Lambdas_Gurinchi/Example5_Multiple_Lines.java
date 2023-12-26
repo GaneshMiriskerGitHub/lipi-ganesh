@@ -1,0 +1,26 @@
+package T2_Lambdas_Gurinchi;
+
+public class Example5_Multiple_Lines {
+	
+	@FunctionalInterface
+	public interface DemoInterfacePeddaMethodu {
+		public void examPassAa(String name, int marks);
+	}
+
+	public static void main(String[] args) {
+		
+		DemoInterfacePeddaMethodu obj = (name, marks) -> {
+			if(marks >= 90) {
+				System.out.println(name + "  exam pass roi.. , inkem le topperrr..");
+			}else {
+				System.out.println(name + " exam pass gaale ayyooo...");
+			}
+		};
+		
+		obj.examPassAa("shloka paapa", 100);
+		obj.examPassAa("lipi", 99);
+		obj.examPassAa("ganesh", 98);
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package T2_Lambdas_Gurinchi;
+
+public class Example5_Multiple_Lines {
+	
+	public interface DemoInterfacePeddaMethodu {
+		public int isEligibleForVote(String name, int age);
+	}
+
+	public static void main(String[] args) {
+		
+		DemoInterfacePeddaMethodu 
+
+	}
+
+}

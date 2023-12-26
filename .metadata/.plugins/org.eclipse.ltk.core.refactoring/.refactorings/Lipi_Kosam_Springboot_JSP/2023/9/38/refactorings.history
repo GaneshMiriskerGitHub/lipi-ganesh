@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.amazon.service.DropDownController.java&apos; to &apos;DropDownService.java&apos;&#x0D;&#x0A;- Original project: &apos;Lipi_Kosam_Springboot_JSP&apos;&#x0D;&#x0A;- Original element: &apos;com.amazon.service.DropDownController.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.amazon.service.DropDownService.java&apos;" description="Rename compilation unit &apos;DropDownController.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.amazon.service{DropDownController.java" name="DropDownService.java" references="false" stamp="1695388250338" version="1.0"/>
+</session>
